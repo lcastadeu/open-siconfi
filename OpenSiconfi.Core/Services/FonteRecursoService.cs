@@ -17,6 +17,11 @@ namespace OpenSiconfi.Application.Services
       Repository = repository;
     }
 
+    public async Task<IFonteRecursoModel> Get(int exercicio, string codigoPrincipal)
+    {
+      return await Repository.FindAsync(x => x.Exercicio == exercicio && x.CodigoPrincipal == codigoPrincipal);
+    }
+
     public async Task<IEnumerable<IFonteRecursoModel>> GetAll(int exercicio)
     {
       return await Repository.FindAllAsync(x => x.Exercicio == exercicio);

@@ -8,7 +8,12 @@ namespace OpenSiconfi.Application.Controllers
 {
   public partial class AbstractController : ControllerBase
   {
-    protected IAbstractService Service { get; set; }
+    private IAbstractService Service { get; set; }
+
+    public AbstractController(IAbstractService service)
+    {
+      Service = service;
+    }
 
     [HttpGet("props")]
     [ApiExplorerSettings(IgnoreApi = true)]
@@ -16,7 +21,6 @@ namespace OpenSiconfi.Application.Controllers
     public OSMensagem GetEntityProperties()
     {
       return new OSMensagem(Service.GetEntityProperties());
-
     }
   }
 }
