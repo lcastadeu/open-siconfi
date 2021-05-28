@@ -7,6 +7,7 @@ namespace OpenSiconfi.Application.Services.Interface
 {
   public partial interface IFonteRecursoService : IAbstractService
   {
+    Task<IFonteRecursoModel> Get(int exercicio, string codigoPrincipal);
     Task<IEnumerable<IFonteRecursoModel>> GetAll(int exercicio);
   }
 }

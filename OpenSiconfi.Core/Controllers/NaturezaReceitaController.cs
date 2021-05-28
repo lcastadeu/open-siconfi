@@ -7,10 +7,11 @@ using OpenSiconfi.Domain.Entities;
 namespace OpenSiconfi.Application.Controllers
 {
     [ApiController]
-    [Route("api/v1/[controller]/")]
+    [Route("api/v{verion:apiVersion}/[controller]/")]
     public class NaturezaReceitaController : AbstractController
     {
-        public NaturezaReceitaController(INaturezaReceitaService service)
+        protected INaturezaReceitaService Service {get; set;}
+        public NaturezaReceitaController(INaturezaReceitaService service) : base(service)
         {
             Service = service;
         }
