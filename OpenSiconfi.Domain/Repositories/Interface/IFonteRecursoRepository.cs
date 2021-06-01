@@ -5,7 +5,7 @@ using OpenSiconfi.Domain.Entities.Interface;
 
 namespace OpenSiconfi.Domain.Repositories.Interface
 {
-  public partial interface IFonteRecursoRepository : IAbstractRepository<FonteRecursoModel>
+  public partial interface IFonteRecursoRepository : IAbstractRepository<FonteRecurso>
   {
     
   }

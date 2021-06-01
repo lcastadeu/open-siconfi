@@ -13,16 +13,16 @@ namespace OpenSiconfi.Application.Services
 
     public FonteRecursoService(IFonteRecursoRepository repository)
     {
-      ServiceType = typeof(FonteRecursoModel);
+      ServiceType = typeof(FonteRecurso);
       Repository = repository;
     }
 
-    public async Task<IFonteRecursoModel> Get(int exercicio, string codigoPrincipal)
+    public async Task<IFonteRecurso> Get(int exercicio, string codigoPrincipal)
     {
       return await Repository.FindAsync(x => x.Exercicio == exercicio && x.CodigoPrincipal == codigoPrincipal);
     }
 
-    public async Task<IEnumerable<IFonteRecursoModel>> GetAll(int exercicio)
+    public async Task<IEnumerable<IFonteRecurso>> GetAll(int exercicio)
     {
       return await Repository.FindAllAsync(x => x.Exercicio == exercicio);
     }

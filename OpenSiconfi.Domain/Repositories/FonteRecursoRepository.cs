@@ -9,7 +9,7 @@ using OpenSiconfi.Domain.Repositories.Interface;
 
 namespace OpenSiconfi.Domain.Repositories
 {
-  public partial class FonteRecursoRepository : AbstractRepository<FonteRecursoModel>, IFonteRecursoRepository
+  public partial class FonteRecursoRepository : AbstractRepository<FonteRecurso>, IFonteRecursoRepository
   {
     public FonteRecursoRepository(IConfiguration configuration) : base(configuration)
     {

@@ -1,6 +1,4 @@
 using Microsoft.AspNetCore.Mvc;
-using System.Text.Json;
-using System.Text.Encodings.Web;
 using OpenSiconfi.Infrastructure;
 using OpenSiconfi.Application.Services.Interface;
 
@@ -17,7 +15,7 @@ namespace OpenSiconfi.Application.Controllers
 
     [HttpGet("props")]
     [ApiExplorerSettings(IgnoreApi = true)]
-    [ResponseCache(VaryByHeader = "User-Agent", Duration = 30)]
+    [ResponseCache(VaryByHeader = "User-Agent", Duration = 600)]
     public OSMensagem GetEntityProperties()
     {
       return new OSMensagem(Service.GetEntityProperties());

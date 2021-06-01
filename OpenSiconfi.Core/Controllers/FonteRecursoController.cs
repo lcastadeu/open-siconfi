@@ -13,7 +13,7 @@ namespace OpenSiconfi.Application.Controllers
 {
   [ApiController]
   [ApiVersion("1.0")]
-  [Route("api/v{version:apiVersion}/{exercicio}/[controller]/")]
+  [Route("api/v{version:apiVersion}/[controller]/")]
   public class FonteRecursoController : AbstractController
   {
     protected IFonteRecursoService Service { get; set; }
@@ -23,17 +23,14 @@ namespace OpenSiconfi.Application.Controllers
     {
       Service = service;
     }
-
-    [HttpGet("{codigoPrincipal}")]
-    [Consumes(MediaTypeNames.Application.Json)]
-    [ProducesResponseType(StatusCodes.Status201Created)]
-    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    
+    [HttpGet("{exercicio}/{codigoPrincipal}")]
     public async Task<OSMensagem> Get(int exercicio, string codigoPrincipal)
     {
       return new OSMensagem(await Service.Get(exercicio, codigoPrincipal));
     }
 
-    [HttpGet]
+    [HttpGet("{exercicio}/")]
     public async Task<OSMensagem> GetAll(int exercicio)
     {
       return new OSMensagem(await Service.GetAll(exercicio));

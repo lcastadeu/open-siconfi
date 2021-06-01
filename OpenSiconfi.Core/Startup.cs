@@ -30,7 +30,7 @@ namespace OpenSiconfi.Core
               .AddControllers();
 
       services.AddDbContext<OSContext>(options =>
-          options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection"))
+          options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection"), b => b.MigrationsAssembly("OpenSiconfi.Core"))
         );
 
       services.AddApiVersioning(config =>
