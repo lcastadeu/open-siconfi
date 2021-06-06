@@ -16,9 +16,9 @@ namespace OpenSiconfi.Application.Services
       Repository = repository;
     }
 
-    public async Task<NaturezaReceita> Get(int exercicio, string contaReceita)
+    public async Task<NaturezaReceita> Get(int exercicio, string nr)
     {
-      return await Repository.FindAsync(x => x.Exercicio == exercicio && x.NR == contaReceita);
+      return await Repository.FindAsync(x => x.Exercicio == exercicio && x.NR == nr);
     }
 
     public async Task<IEnumerable<NaturezaReceita>> GetAll(int exercicio)

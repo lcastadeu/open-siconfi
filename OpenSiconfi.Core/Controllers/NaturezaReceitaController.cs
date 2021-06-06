@@ -21,10 +21,10 @@ namespace OpenSiconfi.Application.Controllers
       Service = service;
     }
 
-    [HttpGet("{exercicio}/{contaReceita}")]
-    public async Task<OSMensagem> Get(int exercicio, string contaReceita)
+    [HttpGet("{exercicio}/{nr}")]
+    public async Task<OSMensagem> Get(int exercicio, string nr)
     {
-      return new OSMensagem(await Service.Get(exercicio, contaReceita));
+      return new OSMensagem(await Service.Get(exercicio, nr));
     }
 
     [HttpGet("{exercicio}/")]
