@@ -6,22 +6,22 @@ using OpenSiconfi.Domain.Repositories.Interface;
 
 namespace OpenSiconfi.Core.ServiceDiscovery
 {
-    public static class ServiceCollectionExtensions
+  public static class ServiceCollectionExtensions
+  {
+    public static IServiceCollection AddServices(this IServiceCollection services)
     {
-        public static IServiceCollection AddServices(this IServiceCollection services)
-        {
-            services.AddScoped<IAbstractService, AbstractService>();
-            services.AddScoped<IFonteRecursoService, FonteRecursoService>();
-            services.AddScoped<INaturezaReceitaService, NaturezaReceitaService>();
+      services.AddScoped<IAbstractService, AbstractService>();
+      services.AddScoped<IFonteRecursoService, FonteRecursoService>();
+      services.AddScoped<INaturezaReceitaService, NaturezaReceitaService>();
 
-            return services;
-        }
-
-        public static IServiceCollection AddRepositories(this IServiceCollection services)
-        {
-           services.AddScoped<IFonteRecursoRepository, FonteRecursoRepository>();
-
-            return services;
-        }
+      return services;
     }
+
+    public static IServiceCollection AddRepositories(this IServiceCollection services)
+    {
+      services.AddScoped<IFonteRecursoRepository, FonteRecursoRepository>();
+      services.AddScoped<INaturezaReceitaRepository, NaturezaReceitaRepository>();
+      return services;
+    }
+  }
 }

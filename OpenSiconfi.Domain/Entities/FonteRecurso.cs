@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using OpenSiconfi.Domain.Entities.Interface;
 using OpenSiconfi.Infrastructure;
-using static OpenSiconfi.Domain.Util.Enums;
+using static OpenSiconfi.Domain.Util.OSEnum;
 
 namespace OpenSiconfi.Domain.Entities
 {
@@ -19,7 +19,7 @@ namespace OpenSiconfi.Domain.Entities
     {
       get
       {
-          return string.Format("{0}{1}{2}",(int) TipoFonteRecurso.ExercicioCorrente, CodigoPrincipal, Detalhamento);
+        return string.Format("{0}{1}{2}", (int)TipoFonteRecurso.ExercicioCorrente, CodigoPrincipal, Detalhamento);
       }
     }
 
@@ -32,10 +32,9 @@ namespace OpenSiconfi.Domain.Entities
     {
       get
       {
-        return string.Format("{0}{1}{2}", (int) TipoFonteRecurso.ExercicioAnteior, CodigoPrincipal, Detalhamento);
+        return string.Format("{0}{1}{2}", (int)TipoFonteRecurso.ExercicioAnteior, CodigoPrincipal, Detalhamento);
       }
     }
-
 
     [
         Column("codigo_principal"),

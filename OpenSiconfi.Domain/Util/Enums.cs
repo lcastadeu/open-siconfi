@@ -1,6 +1,6 @@
 namespace OpenSiconfi.Domain.Util
 {
-    public class Enums
+    public class OSEnum
     {
         public enum TipoFonteRecurso {
             ExercicioCorrente = 1,
