@@ -5,7 +5,7 @@ using OpenSiconfi.Infrastructure;
 namespace OpenSiconfi.Domain.Entities
 {
   [Table("natureza_receita")]
-  public partial class NaturezaReceita : AbstractModel
+  public partial class NaturezaReceita : AbstractModel, INaturezaReceita
   {
     [
         Column("c"),
