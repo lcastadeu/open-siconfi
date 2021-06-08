@@ -4,6 +4,8 @@ using OpenSiconfi.Application.Services.Interface;
 
 namespace OpenSiconfi.Application.Controllers
 {
+  [ApiVersion("1.0")]
+  [Produces("application/json")]
   public partial class AbstractController : ControllerBase
   {
     private IAbstractService Service { get; set; }

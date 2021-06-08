@@ -3,8 +3,8 @@ using OpenSiconfi.Application.Services.Interface;
 
 namespace OpenSiconfi.Application.Controllers
 {
-  [Route("api/[controller]")]
   [ApiController]
+  [Route("api/[controller]")]
   public class StatusController : AbstractController
   {
     public StatusController(IAbstractService service) : base(service)

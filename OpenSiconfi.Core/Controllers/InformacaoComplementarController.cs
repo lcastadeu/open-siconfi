@@ -1,8 +1,5 @@
 using System.Collections.Generic;
-using System.Net.Http;
-using System.Net.Mime;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using OpenSiconfi.Application.Services.Interface;
@@ -13,20 +10,20 @@ namespace OpenSiconfi.Application.Controllers
 {
   [ApiController]
   [Route("api/v{version:apiVersion}/[controller]/")]
-  public class FonteRecursoController : AbstractController
+  public class InformacaoComplementarController : AbstractController
   {
-    protected IFonteRecursoService Service { get; set; }
+    protected IInformacaoComplementarService Service { get; set; }
 
-    public FonteRecursoController(IFonteRecursoService service) 
+    public InformacaoComplementarController(IInformacaoComplementarService service)
       : base(service)
     {
       Service = service;
     }
-    
-    [HttpGet("{exercicio}/{codigoPrincipal}")]
-    public async Task<OSMensagem> Get(int exercicio, string codigoPrincipal)
+
+    [HttpGet("{exercicio}/{codigoIC}")]
+    public async Task<OSMensagem> Get(int exercicio, string codigoIC)
     {
-      return new OSMensagem(await Service.Get(exercicio, codigoPrincipal));
+      return new OSMensagem(await Service.Get(exercicio, codigoIC));
     }
 
     [HttpGet("{exercicio}/")]
@@ -34,6 +31,5 @@ namespace OpenSiconfi.Application.Controllers
     {
       return new OSMensagem(await Service.GetAll(exercicio));
     }
-
   }
 }

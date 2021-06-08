@@ -13,6 +13,7 @@ namespace OpenSiconfi.Core.ServiceDiscovery
       services.AddScoped<IAbstractService, AbstractService>();
       services.AddScoped<IFonteRecursoService, FonteRecursoService>();
       services.AddScoped<INaturezaReceitaService, NaturezaReceitaService>();
+      services.AddScoped<IInformacaoComplementarService, InformacaoComplementarService>();
 
       return services;
     }
@@ -21,6 +22,7 @@ namespace OpenSiconfi.Core.ServiceDiscovery
     {
       services.AddScoped<IFonteRecursoRepository, FonteRecursoRepository>();
       services.AddScoped<INaturezaReceitaRepository, NaturezaReceitaRepository>();
+      services.AddScoped<IInformacaoComplementarRepository, InformacaoComplementarRepository>();
       return services;
     }
   }

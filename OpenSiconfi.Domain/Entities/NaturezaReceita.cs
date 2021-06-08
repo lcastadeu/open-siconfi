@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using OpenSiconfi.Domain.Entities.Interface;
 using OpenSiconfi.Infrastructure;
 
 namespace OpenSiconfi.Domain.Entities
