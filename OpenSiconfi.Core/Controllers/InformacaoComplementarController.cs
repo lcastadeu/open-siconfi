@@ -9,7 +9,7 @@ using OpenSiconfi.Infrastructure;
 namespace OpenSiconfi.Application.Controllers
 {
   [ApiController]
-  [Route("api/v{version:apiVersion}/[controller]/")]
+  [Route("api/v1/[controller]/")]
   public class InformacaoComplementarController : AbstractController
   {
     protected IInformacaoComplementarService Service { get; set; }

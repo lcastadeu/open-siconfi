@@ -31,6 +31,7 @@ namespace OpenSiconfi.Domain
 
       SeedFonteRecurso.Data(modelBuilder);
       SeedNaturezaReceita.Data(modelBuilder);
+      SeedInformacaoComplementar.Data(modelBuilder);
     }
   }
 }

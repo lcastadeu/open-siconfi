@@ -19,7 +19,7 @@ namespace OpenSiconfi.Application.Services
 
     public async Task<IInformacaoComplementar> Get(int exercicio, string codigoIC)
     {
-      return await Repository.FindAsync(x => x.Exercicio == exercicio && x.CodigoIC == codigoIC);
+      return await Repository.FindAsync(x => x.Exercicio == exercicio && x.CodigoIC.ToUpper().Equals(codigoIC.ToUpper()));
     }
 
     public async Task<IEnumerable<IInformacaoComplementar>> GetAll(int exercicio)

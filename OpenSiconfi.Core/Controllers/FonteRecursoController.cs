@@ -12,7 +12,7 @@ using OpenSiconfi.Infrastructure;
 namespace OpenSiconfi.Application.Controllers
 {
   [ApiController]
-  [Route("api/v{version:apiVersion}/[controller]/")]
+  [Route("api/v1/[controller]/")]
   public class FonteRecursoController : AbstractController
   {
     protected IFonteRecursoService Service { get; set; }
