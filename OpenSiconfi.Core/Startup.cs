@@ -48,7 +48,7 @@ namespace OpenSiconfi.Core
         {
           Title = "Open Siconfi",
           Version = "v1",
-          Description = "Serviço..."
+          Description = "Serviço destinado a disponibilização das informações abertas do SICONFI, via API Rest."
         });
       });
     }
