@@ -21,7 +21,7 @@ Este serviço tem como finalidade disponibilizar a planilhar disponibilizada anu
 
 # Pré requisitos
 - [x] Terminal (cmd, powershell, gitbash, ...)
-- [] Docker (Optativo)
+- [ ] Docker (Optativo)
 - .Net 5.0
 
 # Iniciando serviço
