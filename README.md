@@ -9,7 +9,7 @@ Siconfi é o Sistema de Informações Contábeis e Fiscais do Setor Público Bra
 Este serviço tem como finalidade disponibilizar a planilhar disponibilizada anualemente pelo SICONFI, em forma de API Rest. Tendo como finalidade ajudar a comunidade a padronizar as informações.
 
 # O que será disponibilizado
-- [X] Informações Complementáres
+- [x] Informações Complementáres
 - [ ] Conjunto de Informações Complementáres
 - [x] Fontes de Recursos
 - [x] Natureza de Receita
