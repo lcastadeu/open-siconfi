@@ -1,2 +1,14 @@
-# open-siconfi
-Aqui terá disponível uma API com os dados abertos do siconfi
+# Open Siconfi
+Serviço destinado a disponibilização das informações abertas do SICONFI, via API Rest.
+
+# Dados Disponibilizadas
+- Informações Complementáres
+- Conjunto de Informações Complementáres
+- Fontes de Recursos
+- Natureza de Receita
+- Natureza de Despesa
+- Poder e Orgão
+- Função e Subfunção
+- Complemento de Fonte de Recurso
+- PCASP Estendido
+
