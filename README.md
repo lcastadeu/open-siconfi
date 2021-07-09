@@ -20,7 +20,7 @@ Este serviço tem como finalidade disponibilizar a planilhar disponibilizada anu
 - [ ] PCASP Estendido
 
 # Pré requisitos
-- [X] Terminal (cmd, powershell, gitbash, ...)
+- [x] Terminal (cmd, powershell, gitbash, ...)
 - [] Docker (Optativo)
 - .Net 5.0
 
