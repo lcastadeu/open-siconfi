@@ -22,7 +22,7 @@ Este serviço tem como finalidade disponibilizar a planilhar disponibilizada anu
 # Pré requisitos
 - [x] Terminal (cmd, powershell, gitbash, ...)
 - [ ] Docker (Optativo)
-- [x].Net 5.0
+- [x] .Net 5.0
 
 # Iniciando serviço
 Para iniciar o projeto possuem duas opções, na qual fica optativo. Basta abrir o terminal e executar um dos comando abaixo.
