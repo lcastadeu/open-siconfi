@@ -1,6 +1,6 @@
 using Microsoft.Extensions.DependencyInjection;
-using OpenSiconfi.Application.Services;
-using OpenSiconfi.Application.Services.Interface;
+using OpenSiconfi.Core.Services;
+using OpenSiconfi.Core.Services.Interface;
 using OpenSiconfi.Domain.Repositories;
 using OpenSiconfi.Domain.Repositories.Interface;
 
@@ -14,6 +14,7 @@ namespace OpenSiconfi.Core.ServiceDiscovery
       services.AddScoped<IFonteRecursoService, FonteRecursoService>();
       services.AddScoped<INaturezaReceitaService, NaturezaReceitaService>();
       services.AddScoped<IInformacaoComplementarService, InformacaoComplementarService>();
+      services.AddScoped<IComplementoFonteRecursoService, ComplementoFonteRecursoService>();
 
       return services;
     }
@@ -23,6 +24,8 @@ namespace OpenSiconfi.Core.ServiceDiscovery
       services.AddScoped<IFonteRecursoRepository, FonteRecursoRepository>();
       services.AddScoped<INaturezaReceitaRepository, NaturezaReceitaRepository>();
       services.AddScoped<IInformacaoComplementarRepository, InformacaoComplementarRepository>();
+      services.AddScoped<IComplementoFonteRecursoRepository, ComplementoFonteRecursoRepository>();
+
       return services;
     }
   }

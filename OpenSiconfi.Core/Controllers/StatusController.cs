@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-using OpenSiconfi.Application.Services.Interface;
+using OpenSiconfi.Core.Services.Interface;
 
 namespace OpenSiconfi.Application.Controllers
 {
