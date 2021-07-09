@@ -1,12 +1,12 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using OpenSiconfi.Application.Services.Interface;
+using OpenSiconfi.Core.Services.Interface;
 using OpenSiconfi.Domain.Entities;
 using OpenSiconfi.Domain.Repositories.Interface;
 
-namespace OpenSiconfi.Application.Services
+namespace OpenSiconfi.Core.Services
 {
-  public partial class NaturezaReceitaService : AbstractService, INaturezaReceitaService
+  public class NaturezaReceitaService : AbstractService, INaturezaReceitaService
   {
     protected INaturezaReceitaRepository Repository { get; set; }
 

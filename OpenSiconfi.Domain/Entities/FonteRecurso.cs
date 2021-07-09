@@ -1,13 +1,12 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using OpenSiconfi.Domain.Entities.Interface;
 using OpenSiconfi.Infrastructure;
 using static OpenSiconfi.Domain.Util.OSEnum;
 
 namespace OpenSiconfi.Domain.Entities
 {
   [Table("fonte_recurso")]
-  public partial class FonteRecurso : AbstractModel, IFonteRecurso
+  public partial class FonteRecurso : AbstractModel
   {
 
     [

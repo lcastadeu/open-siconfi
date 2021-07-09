@@ -1,13 +1,12 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using OpenSiconfi.Application.Services.Interface;
+using OpenSiconfi.Core.Services.Interface;
 using OpenSiconfi.Domain.Entities;
-using OpenSiconfi.Domain.Entities.Interface;
 using OpenSiconfi.Domain.Repositories.Interface;
 
-namespace OpenSiconfi.Application.Services
+namespace OpenSiconfi.Core.Services
 {
-  public partial class FonteRecursoService : AbstractService, IFonteRecursoService
+  public class FonteRecursoService : AbstractService, IFonteRecursoService
   {
     protected IFonteRecursoRepository Repository { get; set; }
 
@@ -17,12 +16,12 @@ namespace OpenSiconfi.Application.Services
       Repository = repository;
     }
 
-    public async Task<IFonteRecurso> Get(int exercicio, string codigoPrincipal)
+    public async Task<FonteRecurso> Get(int exercicio, string codigoPrincipal)
     {
       return await Repository.FindAsync(x => x.Exercicio == exercicio && x.CodigoPrincipal == codigoPrincipal);
     }
 
-    public async Task<IEnumerable<IFonteRecurso>> GetAll(int exercicio)
+    public async Task<IEnumerable<FonteRecurso>> GetAll(int exercicio)
     {
       return await Repository.FindAllAsync(x => x.Exercicio == exercicio);
     }

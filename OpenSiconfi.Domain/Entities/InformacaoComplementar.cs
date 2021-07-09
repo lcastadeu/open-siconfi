@@ -1,13 +1,12 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using OpenSiconfi.Domain.Entities.Interface;
 using OpenSiconfi.Infrastructure;
 
 namespace OpenSiconfi.Domain.Entities
 {
   [Table("informacao_complementar")]
-  public partial class InformacaoComplementar : AbstractModel, IInformacaoComplementar
+  public partial class InformacaoComplementar : AbstractModel
   {
     [
         Column("codigo_ic"),

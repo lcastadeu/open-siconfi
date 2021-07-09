@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
+using OpenSiconfi.Core.Services.Interface;
 using OpenSiconfi.Infrastructure;
-using OpenSiconfi.Application.Services.Interface;
 
 namespace OpenSiconfi.Application.Controllers
 {

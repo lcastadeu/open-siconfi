@@ -2,17 +2,13 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Reflection;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using OpenSiconfi.Application.Services.Interface;
+using OpenSiconfi.Core.Services.Interface;
 using OpenSiconfi.Domain.Dto;
-using OpenSiconfi.Domain.Entities.Interface;
-using OpenSiconfi.Domain.Repositories.Interface;
 using OpenSiconfi.Infrastructure;
 
-namespace OpenSiconfi.Application.Services
+namespace OpenSiconfi.Core.Services
 {
-  public partial class AbstractService : IAbstractService
+  public class AbstractService : IAbstractService
   {
     public Type ServiceType { get; set; }
     
@@ -24,9 +20,7 @@ namespace OpenSiconfi.Application.Services
     public List<PropsDto> GetEntityProperties()
     {
       if (ServiceType == null)
-      {
         throw new Exception("Tipo do serviço não definido!");
-      }
 
       List<PropsDto> properties = new();
       foreach (PropertyInfo propertyInfo in ServiceType.GetProperties())

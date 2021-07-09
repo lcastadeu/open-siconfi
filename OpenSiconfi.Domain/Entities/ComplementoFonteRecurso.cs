@@ -17,7 +17,7 @@ namespace OpenSiconfi.Domain.Entities
             Required(AllowEmptyStrings = false, ErrorMessage = "Campo Obrigatório"),
             StringLength(4, ErrorMessage = "O Campo {0} deve ter {1} caracter!")
         ]
-        public string Codigo{ get; set; }
+        public int Codigo{ get; set; }
 
         [
             Column("nomenclatura"),

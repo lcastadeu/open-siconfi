@@ -1,9 +1,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration;
-using OpenSiconfi.Application.Services.Interface;
-using OpenSiconfi.Domain.Entities;
+using OpenSiconfi.Core.Services.Interface;
 using OpenSiconfi.Infrastructure;
 
 namespace OpenSiconfi.Application.Controllers
