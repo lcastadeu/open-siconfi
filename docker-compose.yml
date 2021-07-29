@@ -1,0 +1,38 @@
+version: '3.9'
+
+services:
+  opensiconfi-service:
+    image: opensiconfi-service
+    container_name: opensiconfi-service
+    restart: always
+    build:
+      context: .
+      dockerfile: ./OpenSiconfi.Core/Dockerfile
+    environment:
+      - ASPNETCORE_URLS=http://+:5000
+    links: 
+      - postgres
+    networks: 
+      - default
+    ports:
+      - 5000:5000
+  postgres:
+    image: postgres
+    container_name: opensiconfi-database
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    volumes:
+      - postgres:/var/lib/postgresql/data
+    networks: 
+      - default
+    ports:
+      - 5400:5432
+volumes:
+  postgres:
+    external: true
+networks: 
+  default:
+    driver: bridge
+    name: opensiconfi

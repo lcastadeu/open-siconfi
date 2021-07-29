@@ -15,10 +15,7 @@ namespace OpenSiconfi.Core
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
-                    webBuilder.UseStartup<Startup>()
-                    .ConfigureKestrel(serverOptions => {
-                        serverOptions.Listen(IPAddress.Loopback, 5000);
-                    });
+                    webBuilder.UseStartup<Startup>();
                 });
     }
 }
