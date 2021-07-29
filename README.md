@@ -6,7 +6,7 @@
 SICONFI é o Sistema de Informações Contábeis e Fiscais do Setor Público Brasileiro destinado a receber os dados contábeis, orçamentários e fiscais dos entes da federação. Entrou em operação no ano de 2014 e é mantido pela Secretaria do Tesouro Nacional (STN).
 
 ## O Serviço
-Este serviço tem como finalidade disponibilizar a planilhar disponibilizada anualemente pelo SICONFI, em forma de API Rest. Tendo como finalidade ajudar a comunidade a padronizar as informações.
+Este serviço tem como finalidade fornecer a planilha disponibilizada anualmente pelo SICONFI, em forma de API Rest. Tendo como finalidade ajudar a comunidade a padronizar as informações.
 
 # O que será disponibilizado
 - [x] Informações Complementáres
